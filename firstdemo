@@ -1,0 +1,17 @@
+def calculate_blog_post_cost(word_count, rate_per_word):
+    return word_count * rate_per_word
+
+def main():
+    rate_per_word = 0.02  # Adjust this rate according to simonzaku.com's pricing
+    try:
+        word_count = int(input("Enter the number of words in the blog post: "))
+        if word_count <= 0:
+            print("Please enter a valid number of words.")
+        else:
+            total_cost = calculate_blog_post_cost(word_count, rate_per_word)
+            print(f"The cost for the blog post with {word_count} words is: ${total_cost:.2f}")
+    except ValueError:
+        print("Please enter a valid number.")
+
+if __name__ == "__main__":
+    main()
